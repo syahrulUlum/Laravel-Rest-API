@@ -85,7 +85,7 @@ class TradeController extends Controller
                                 $other_items[$key] -= $trade_items[$key];
                                 Trade::where('survivor_id', $id)->update([$data_trade => 0]);
                                 Inventory::where('survivor_id', $id_inv_trader)->update([$data_inventory => $other_items[$key]]);
-                            }else if($other_items[$key] < $trade_items[$key]){
+                            } else if ($other_items[$key] < $trade_items[$key]) {
                                 foreach ($other_items as $key2 => $other_item) {
                                     # code...
                                 }
